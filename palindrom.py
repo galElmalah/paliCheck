@@ -1,5 +1,6 @@
 """
 checking how many palindroms in a given string
+and some string manipulation shit...
 """
 
 
@@ -15,6 +16,14 @@ def palindrom(str):
         if word == reverseString(word):#check each word with the same word only reversd
             pali_count+=1
     return pali_count
+
+def countCharsSpaces(str):
+    counter = 0
+    for i in range(0,len(str)):
+        if str[i] == " ":
+            counter+=1
+    return len(str)-counter
+
 
 def main():
     a=input("Enter a string:")
